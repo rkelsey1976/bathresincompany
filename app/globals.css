@@ -1,26 +1,266 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F6F1;      /* Slightly warmer off-white from texture */
+  --foreground: #2A2A2A;     /* Slightly softer dark grey from texture */
+  /* Color Scheme from Texture Image - Beige/Tan/Grey (Tweaked) */
+  --primary: #D4B89A;        /* Lighter cream - Main brand color */
+  --primary-light: #F5E6D3; /* Very light cream */
+  --primary-dark: #C19A6B;   /* Medium cream */
+  --secondary: #6D6D6D;      /* Slightly warmer medium grey */
+  --accent: #E8D4B8;         /* Light cream accent */
+  --beige-light: #FAF5ED;    /* Very light cream background */
+  --beige-medium: #F5E6D3;   /* Light cream */
+  --grey-dark: #4D4D4D;      /* Slightly warmer dark grey */
+  --grey-medium: #6D6D6D;     /* Slightly warmer medium grey */
+  --black: #1C1C1C;          /* Slightly softer black */
+  --black-light: #2A2A2A;    /* Slightly softer lighter black */
+  /* Legacy support */
+  --gold: var(--primary);
+  --gold-light: var(--primary-light);
+  --gold-dark: var(--primary-dark);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  
+  /* Brand Colors from Logo - Update these to match your logo */
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll padding for sticky header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tarmac/Grunge Texture Effects */
+.tarmac-texture {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 3px
+    );
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.tarmac-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.3'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.tarmac-grain {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(0, 0, 0, 0.08) 0%, transparent 50%);
+  background-size: 200% 200%, 150% 150%, 180% 180%;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 12;
+  animation: grainMove 20s ease-in-out infinite;
+}
+
+@keyframes grainMove {
+  0%, 100% {
+    background-position: 0% 0%, 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%, 50% 50%, 80% 20%;
+  }
+}
+
+.tarmac-roughness {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(0, 0, 0, 0.05) 0deg,
+      transparent 5deg,
+      rgba(0, 0, 0, 0.03) 10deg,
+      transparent 15deg
+    );
+  opacity: 0.7;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.tarmac-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.08) 0%, transparent 50%);
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 12;
+}
+
+/* Additional tarmac surface effects */
+.tarmac-surface {
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 12;
+}
+
+/* About Section Texture */
+.about-texture {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(212, 184, 154, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(212, 184, 154, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(212, 184, 154, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(212, 184, 154, 0.03) 3px
+    ),
+    radial-gradient(circle at 30% 40%, rgba(245, 230, 211, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(232, 212, 184, 0.1) 0%, transparent 50%);
+  background-size: 40px 40px, 40px 40px, 300% 300%, 250% 250%;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.about-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+/* Hero Geometric Pattern */
+.hero-geometric-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 1px, rgba(212, 175, 55, 0.05) 1px),
+    linear-gradient(-45deg, transparent 1px, rgba(212, 175, 55, 0.05) 1px);
+  background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 11;
+  mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Subtle corner accents */
+.hero-corner-accent {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+  z-index: 11;
+}
+
+.hero-corner-accent-top-left {
+  top: -100px;
+  left: -100px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+}
+
+.hero-corner-accent-top-right {
+  top: -100px;
+  right: -100px;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 20px;
+}
+
+.hero-corner-accent-bottom-left {
+  bottom: -100px;
+  left: -100px;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+}
+
+.hero-corner-accent-bottom-right {
+  bottom: -100px;
+  right: -100px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 20px;
 }
