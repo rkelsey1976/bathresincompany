@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import ContactFormModal from "@/components/ContactFormModal";
+import ContactModal from "@/components/ContactModal";
 
 export default function ContactForm() {
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <>
@@ -96,7 +98,7 @@ export default function ContactForm() {
                     <div className="flex flex-wrap gap-4">
                       <button
                         onClick={() => setIsFormModalOpen(true)}
-                        className="bg-gradient-to-br from-[#C19A6B] via-[#D4B89A] to-[#E8D4B8] text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-[#E8D4B8] hover:via-[#F5E6D3] hover:to-[#FAF5ED] transition-all duration-300 shadow-2xl hover:shadow-[0_0_40px_rgba(212,184,154,0.6)] hover:scale-110 border-2 border-[#D4B89A]/30 flex items-center gap-2"
+                        className="bg-black text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 shadow-2xl hover:shadow-[0_0_40px_rgba(0,0,0,0.6)] hover:scale-110 border-2 border-black flex items-center gap-2"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -104,7 +106,7 @@ export default function ContactForm() {
                         Get a Free Quote
                       </button>
                       <button
-                        onClick={() => setIsFormModalOpen(true)}
+                        onClick={() => setIsContactModalOpen(true)}
                         className="bg-transparent border-2 border-[#D4B89A] text-[#D4B89A] px-10 py-5 rounded-xl hover:bg-[#D4B89A] hover:text-white transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,6 +126,10 @@ export default function ContactForm() {
       <ContactFormModal
         isOpen={isFormModalOpen}
         onClose={() => setIsFormModalOpen(false)}
+      />
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </>
   );

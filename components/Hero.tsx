@@ -86,7 +86,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           <div className="lg:col-span-2 text-center lg:text-left relative">
             {/* Text backdrop for better readability */}
-            <div className="absolute inset-0 bg-black/30 rounded-lg -m-4 blur-xl z-0"></div>
+            <div className="absolute inset-0 bg-black/30 rounded-lg -m-4 blur-xl z-0 pointer-events-none"></div>
             <div className="relative z-10">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-2xl">
                 <span className="text-white drop-shadow-lg">Resin Driveways</span>
@@ -103,10 +103,10 @@ export default function Hero() {
                 Serving Bath, Somerset, and Wiltshire. Over 20 years of experience with NVQ, CPCS, City & Guilds, and SWQR qualifications. 15-year guarantee on all resin driveways.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 relative z-20">
               <button
                 onClick={() => setIsFormModalOpen(true)}
-                className="bg-gradient-to-br from-[#C19A6B] via-[#D4B89A] via-[#E8D4B8] to-[#D4B89A] text-black px-10 py-5 rounded-xl font-bold text-lg hover:from-[#E8D4B8] hover:via-[#F5E6D3] hover:via-[#FAF5ED] hover:to-[#E8D4B8] transition-all duration-300 flex items-center gap-2 shadow-2xl hover:shadow-[0_0_40px_rgba(232,212,184,0.8),0_0_20px_rgba(245,230,211,0.6)] hover:scale-110 hover:brightness-110 border-2 border-black/20 hover:border-[#E8D4B8]/60"
+                className="bg-gradient-to-br from-[#C19A6B] via-[#D4B89A] via-[#E8D4B8] to-[#D4B89A] text-black px-10 py-5 rounded-xl font-bold text-lg hover:from-[#E8D4B8] hover:via-[#F5E6D3] hover:via-[#FAF5ED] hover:to-[#E8D4B8] transition-all duration-300 flex items-center gap-2 shadow-2xl hover:shadow-[0_0_40px_rgba(232,212,184,0.8),0_0_20px_rgba(245,230,211,0.6)] hover:scale-110 hover:brightness-110 border-2 border-black/20 hover:border-[#E8D4B8]/60 relative z-20 cursor-pointer"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

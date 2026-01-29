@@ -76,7 +76,7 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -99,14 +99,14 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
         <div className="p-6 sm:p-8">
           <div className="text-center mb-6">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-black">
-              How can we <span className="text-[#D4B89A]">help you?</span>
+              How can we <span className="text-black">help you?</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <button
                 onClick={() => {
                   // Could pre-fill form or scroll to specific section
                 }}
-                className="bg-[#D4B89A] text-white px-6 py-2 rounded-lg hover:bg-[#E8D4B8] transition-colors font-medium"
+                className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium"
               >
                 I would like a quote
               </button>
@@ -114,7 +114,7 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                 onClick={() => {
                   // Could pre-fill form or scroll to specific section
                 }}
-                className="bg-transparent border-2 border-[#D4B89A] text-[#D4B89A] px-6 py-2 rounded-lg hover:bg-[#D4B89A] hover:text-white transition-colors font-medium"
+                className="bg-transparent border-2 border-black text-black px-6 py-2 rounded-lg hover:bg-black hover:text-white transition-colors font-medium"
               >
                 I have an enquiry
               </button>
@@ -195,7 +195,7 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
               />
               <div className="flex justify-between text-xs text-gray-600 mt-1">
                 <span>0 - Not Urgent</span>
-                <span className="font-semibold text-[#D4AF37]">Current: {formData.urgency}</span>
+                <span className="font-semibold text-black">Current: {formData.urgency}</span>
                 <span>10 - Emergency</span>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
 
             <button
               type="submit"
-              className="w-full bg-[#D4B89A] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#E8D4B8] transition-colors"
+              className="w-full bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
             >
               Submit
             </button>
