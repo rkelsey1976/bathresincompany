@@ -1,6 +1,6 @@
 export default function ServiceAreas() {
   return (
-    <section className="py-8 sm:py-12 bg-white">
+    <section id="service-areas" className="py-8 sm:py-12 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-black">

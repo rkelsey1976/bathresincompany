@@ -66,7 +66,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-8 sm:py-12 bg-[#FAF5ED]">
+    <section id="faq" className="py-8 sm:py-12 bg-[#FAF5ED]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-black">
