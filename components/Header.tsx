@@ -40,7 +40,7 @@ export default function Header() {
             >
               <Image
                 src="/logo.png"
-                alt="Bath Resin Company Logo"
+                alt="•BR Precision• | •Bath Resin Company Ltd• Logo"
                 width={300}
                 height={100}
                 className="h-16 sm:h-20 md:h-24 w-auto py-2"

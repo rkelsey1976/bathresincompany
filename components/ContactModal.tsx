@@ -65,7 +65,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <div className="flex items-center justify-between gap-4">
             <div>
               <h2 className="text-3xl font-bold text-white mb-2">Contact Us</h2>
-              <p className="text-white/90">Get in touch with Bath Resin Company</p>
+              <p className="text-white/90">Get in touch with •BR Precision• | •Bath Resin Company Ltd•</p>
             </div>
             <div className="flex-shrink-0">
               <Image

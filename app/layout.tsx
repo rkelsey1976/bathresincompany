@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bath Resin Company | Bespoke Resin Driveways & Landscaping Services in Bath, Somerset",
-  description: "Bath Resin Company - Family-run resin driveway and landscaping specialists in Bath, Somerset, and Wiltshire. Established 2004. Over 20 years of experience. NVQ, CPCS, City & Guilds, and SWQR qualified. 15-year guarantee on resin driveways. Professional resin bound driveways, tarmac services, garden transformations, and landscaping across Bath, Bristol, Chippenham, Trowbridge, and surrounding areas.",
-  keywords: "resin driveways Bath, resin bound driveways Bath, landscaping Bath, garden transformations Bath, tarmac services Bath, driveway installation Bath, resin driveways Somerset, landscaping Somerset, Bath Resin Company, BR Landscapes, resin driveways Bristol, resin driveways Chippenham, resin driveways Trowbridge, qualified driveway installers Bath, NVQ groundworks Bath, CPCS certified Bath, City and Guilds resin surfacing, SWQR streetworks Bath",
-  authors: [{ name: "Bath Resin Company" }],
-  creator: "Bath Resin Company",
-  publisher: "Bath Resin Company",
+  title: "•BR Precision• | •Bath Resin Company Ltd• | Bespoke Resin Driveways & Landscaping Services in Bath, Somerset",
+  description: "•BR Precision• | •Bath Resin Company Ltd• - Family-run resin driveway and landscaping specialists in Bath, Somerset, and Wiltshire. Established 2004. Over 20 years of experience. NVQ, CPCS, City & Guilds, and SWQR qualified. 15-year guarantee on resin driveways. Professional resin bound driveways, tarmac services, garden transformations, and landscaping across Bath, Bristol, Chippenham, Trowbridge, and surrounding areas.",
+  keywords: "resin driveways Bath, resin bound driveways Bath, landscaping Bath, garden transformations Bath, tarmac services Bath, driveway installation Bath, resin driveways Somerset, landscaping Somerset, Bath Resin Company, BR Precision, BR Landscapes, resin driveways Bristol, resin driveways Chippenham, resin driveways Trowbridge, qualified driveway installers Bath, NVQ groundworks Bath, CPCS certified Bath, City and Guilds resin surfacing, SWQR streetworks Bath",
+  authors: [{ name: "•BR Precision• | •Bath Resin Company Ltd•" }],
+  creator: "•BR Precision• | •Bath Resin Company Ltd•",
+  publisher: "•BR Precision• | •Bath Resin Company Ltd•",
   formatDetection: {
     email: false,
     address: false,
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Bath Resin Company | Bespoke Resin Driveways & Landscaping",
+    title: "•BR Precision• | •Bath Resin Company Ltd• | Bespoke Resin Driveways & Landscaping",
     description: "Family-run resin driveway and landscaping specialists in Bath. Over 20 years of experience creating beautiful, lasting outdoor spaces.",
     url: "https://bathresincompany.co.uk",
-    siteName: "Bath Resin Company",
+    siteName: "•BR Precision• | •Bath Resin Company Ltd•",
     locale: "en_GB",
     type: "website",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bath Resin Company | Bespoke Resin Driveways & Landscaping",
+    title: "•BR Precision• | •Bath Resin Company Ltd• | Bespoke Resin Driveways & Landscaping",
     description: "Family-run resin driveway and landscaping specialists in Bath. Over 20 years of experience.",
     images: ["https://bathresincompany.co.uk/logo.png"],
   },

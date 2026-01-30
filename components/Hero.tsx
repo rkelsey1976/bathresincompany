@@ -99,8 +99,15 @@ export default function Hero() {
               <p className="text-base text-gray-100 mb-2 drop-shadow-md">
                 <span className="font-semibold text-[#F5E6D3]">Bath Resin Company</span> - Family-run specialists
               </p>
+              {/* 15-Year Guarantee Badge */}
+              <div className="flex items-center gap-2 mb-4 justify-center lg:justify-start">
+                <svg className="w-6 h-6 text-[#D4B89A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+                <span className="text-lg font-semibold text-white drop-shadow-lg">15-Year Guarantee on All Resin Driveways</span>
+              </div>
               <p className="text-base sm:text-lg mb-8 text-gray-200 max-w-2xl mx-auto lg:mx-0 drop-shadow-md">
-                Serving Bath, Somerset, and Wiltshire. Over 20 years of experience with NVQ, CPCS, City & Guilds, and SWQR qualifications. 15-year guarantee on all resin driveways.
+                Serving Bath, Somerset, and Wiltshire. Over 20 years of experience with NVQ, CPCS, City & Guilds, and SWQR qualifications.
               </p>
             </div>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 relative z-20">
