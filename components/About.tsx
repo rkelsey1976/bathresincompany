@@ -19,6 +19,8 @@ export default function About() {
                     fill
                     className="object-cover"
                     priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={85}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
@@ -33,6 +35,9 @@ export default function About() {
                       alt="Resin driveway project"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -43,6 +48,9 @@ export default function About() {
                       alt="Landscaping work"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -53,6 +61,9 @@ export default function About() {
                       alt="Professional installation"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -63,6 +74,9 @@ export default function About() {
                       alt="Completed driveway project"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>

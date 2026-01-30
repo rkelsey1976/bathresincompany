@@ -13,6 +13,9 @@ export default function BusinessInfo() {
                 alt="Resin driveway installation"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={75}
+                loading="lazy"
               />
             </div>
             <div className="relative h-48 md:h-64 rounded-lg overflow-hidden shadow-lg border-2 border-gray-300">
@@ -21,6 +24,9 @@ export default function BusinessInfo() {
                 alt="Landscaping work"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={75}
+                loading="lazy"
               />
             </div>
             <div className="relative h-48 md:h-64 rounded-lg overflow-hidden shadow-lg border-2 border-gray-300">
@@ -29,6 +35,9 @@ export default function BusinessInfo() {
                 alt="Professional installation"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={75}
+                loading="lazy"
               />
             </div>
           </div>

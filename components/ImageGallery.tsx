@@ -64,6 +64,8 @@ export default function ImageGallery() {
                 fill
                 className="object-cover transition-opacity duration-500"
                 priority={currentIndex === 0}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                quality={85}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               
@@ -111,6 +113,9 @@ export default function ImageGallery() {
                     alt={image.alt}
                     fill
                     className="object-cover"
+                    sizes="80px"
+                    quality={60}
+                    loading="lazy"
                   />
                 </button>
               ))}

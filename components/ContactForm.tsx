@@ -24,6 +24,9 @@ export default function ContactForm() {
                       alt="Resin driveway installation"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -33,6 +36,9 @@ export default function ContactForm() {
                       alt="Landscaping project"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -42,6 +48,9 @@ export default function ContactForm() {
                       alt="Professional installation"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -51,6 +60,9 @@ export default function ContactForm() {
                       alt="Completed project"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={75}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>

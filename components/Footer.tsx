@@ -32,6 +32,9 @@ export default function Footer() {
                   width={300}
                   height={100}
                   className="h-16 sm:h-20 w-auto py-2"
+                  quality={85}
+                  sizes="(max-width: 768px) 200px, 300px"
+                  loading="lazy"
                 />
               </a>
               <p className="text-gray-400 mb-2">

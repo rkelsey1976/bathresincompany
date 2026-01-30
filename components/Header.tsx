@@ -47,6 +47,8 @@ export default function Header() {
                 height={100}
                 className="h-16 sm:h-20 md:h-24 w-auto py-2"
                 priority
+                quality={90}
+                sizes="(max-width: 640px) 200px, (max-width: 768px) 250px, 300px"
               />
             </a>
 

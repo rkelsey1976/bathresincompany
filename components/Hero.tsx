@@ -50,7 +50,7 @@ export default function Hero() {
       
       {/* Rotating Background Images with Gradient Overlays */}
       <div className="absolute inset-0">
-        {/* Rotating background images */}
+        {/* Rotating background images - only load first 2 immediately, rest lazy */}
         {backgroundImages.map((src, index) => (
           <div
             key={src}
@@ -68,6 +68,9 @@ export default function Hero() {
               fill
               className="object-cover"
               priority={index === 0}
+              sizes="100vw"
+              quality={index === 0 ? 85 : index === 1 ? 80 : 75}
+              loading={index <= 1 ? undefined : "lazy"}
             />
           </div>
         ))}
@@ -155,6 +158,8 @@ export default function Hero() {
                   height={83}
                   className="h-12 sm:h-16 md:h-20 w-auto"
                   priority
+                  quality={90}
+                  sizes="(max-width: 640px) 150px, (max-width: 1024px) 200px, 250px"
                 />
               </a>
             </div>
@@ -168,6 +173,8 @@ export default function Hero() {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={80}
                 />
               </div>
               <div className="relative h-32 lg:h-40 rounded-lg overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-3 transition-transform duration-300">
@@ -178,6 +185,9 @@ export default function Hero() {
                   alt="Resin driveway installation"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={75}
+                  loading="lazy"
                 />
               </div>
               <div className="relative h-32 lg:h-40 rounded-lg overflow-hidden shadow-2xl border-4 border-white transform -rotate-1 hover:-rotate-2 transition-transform duration-300">
@@ -188,6 +198,9 @@ export default function Hero() {
                   alt="Landscaping project"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={75}
+                  loading="lazy"
                 />
               </div>
               <div className="relative h-32 lg:h-40 rounded-lg overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-2 transition-transform duration-300">
@@ -198,6 +211,9 @@ export default function Hero() {
                   alt="Resin driveway project"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={75}
+                  loading="lazy"
                 />
               </div>
             </div>
